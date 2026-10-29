@@ -3,44 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="الموقع التذكاري لثانوية حسيني حسين لإحياء ذكرى اندلاع الثورة التحريرية المباركة في أول نوفمبر 1954.">
-    <title>ثانوية حسيني حسين | ذكرى أول نوفمبر 1954</title>
+    <meta name="description" content="البوابة التاريخية والتذكارية لثانوية حسيني حسين — إحياء ذكرى اندلاع الثورة التحريرية الجزائرية في أول نوفمبر 1954.">
+    <title>ثانوية حسيني حسين | ملحمة أول نوفمبر 1954</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800&display=swap">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <div class="reading-progress" id="readingProgress"></div>
 
     <header class="gov-topbar">
         <div class="gov-inner">
             <span class="gov-title">الجمهورية الجزائرية الديمقراطية الشعبية</span>
-            <span class="gov-ministry">وزارة التربية الوطنية</span>
+            <span class="gov-ministry">وزارة التربية الوطنية — ثانوية حسيني حسين</span>
         </div>
     </header>
 
+    <nav class="site-navbar" id="siteNavbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-emblem">★</span>
+                <span>ثانوية حسيني حسين</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">المطلع</a></li>
+                <li><a href="#chronicle" class="nav-link">مسار الثورة</a></li>
+                <li><a href="#proclamation" class="nav-link">بيان نوفمبر</a></li>
+                <li><a href="#martyr" class="nav-link">الشهيد والذاكرة</a></li>
+                <li><a href="#institution" class="nav-link">الصرح التربوي</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main class="page-frame">
         
-        <section class="monument-banner">
-            <div class="national-flag-card">
-                <img src="image/pannelpalg.webp" 
-                     alt="العلم الوطني الجزائري" 
-                     class="flag-image"
-                     width="175"
-                     height="116"
-                     loading="eager"
-                     decoding="async"
-                     onerror="this.onerror=null; this.src='image/pannelalg.jpg';">
+        <section id="hero" class="monument-banner reveal">
+            <div class="hero-badge-row">
+                <span class="stamp-tag">وثيقة إحياء الملحمة الوطنية</span>
+                <span class="date-badge">1 نوفمبر 1954 — 5 جويلية 1962</span>
             </div>
 
-            <div class="memorial-headline">
-                <span class="stamp-tag">وثيقة إحياء الملحمة الوطنية</span>
-                <h1 class="main-heading">ملحمة أول نوفمبر 1954: فجر الثورة والسيادة</h1>
-                <p class="sub-heading">تحية إجلال لأبطال جيش وجبهة التحرير الوطني وشهداء الواجب المقدس</p>
+            <div class="hero-grid">
+                <div class="memorial-headline">
+                    <h1 class="main-heading">ملحمة أول نوفمبر 1954: فجر الثورة والسيادة</h1>
+                    <p class="sub-heading">
+                        تحية إجلال لأبطال جيش وجبهة التحرير الوطني وشهداء الواجب المقدس، من معاقل الكفاح المسلح إلى ميادين العلم وبناء الوطن.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="1954">1954</span>
+                            <span class="stat-label">اندلاع الثورة التحريرية</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">1.5M+</span>
+                            <span class="stat-label">شهيد فداءً للوطن</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num" data-target="6">6</span>
+                            <span class="stat-label">مناطق عسكرية تاريخية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="national-flag-card">
+                    <div class="flag-frame">
+                        <img src="image/pannelpalg.webp" 
+                             alt="العلم الوطني الجزائري" 
+                             class="flag-image"
+                             width="220"
+                             height="146"
+                             loading="eager"
+                             decoding="async"
+                             onerror="this.onerror=null; this.src='image/pannelalg.jpg';">
+                        <span class="flag-caption">الراية الوطنية الجزائرية — رمز السيادة والشهداء</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <figure class="anthem-excerpt">
+        <figure class="anthem-excerpt reveal">
+            <div class="anthem-ornament">۞</div>
             <blockquote>
                 « وعقدنا العزم أن تحيا الجزائر .. فاشهدوا .. فاشهدوا .. فاشهدوا »
             </blockquote>
@@ -49,7 +99,7 @@
             </figcaption>
         </figure>
 
-        <section class="battle-chronicle">
+        <section id="chronicle" class="battle-chronicle reveal">
             <div class="section-badge-wrap">
                 <span class="badge-title">محطات العزة والشرف</span>
                 <h2 class="section-main-title">من رصاصة الأوراس إلى إعلان الاستقلال</h2>
@@ -57,105 +107,144 @@
 
             <div class="chronicle-grid">
                 <article class="chronicle-card">
-                    <div class="card-lead-num">01</div>
+                    <div class="card-header-row">
+                        <span class="card-lead-num">01</span>
+                        <span class="card-date">ليلة 1 نوفمبر 1954</span>
+                    </div>
                     <h3>طلائع الكفاح المسلح</h3>
                     <p>
-                        دوّت الرصاصة الأولى ليلة الاثنين الأول من نوفمبر 1954
-                        في معاقل الأوراس الشامخة والقبائل والشمال القسنطيني
-                        والغرب الجزائري، لتعلن بداية ثورة شعبية حاسمة
-                        قلبت موازين القوى الاستعمارية.
+                        دوّت الرصاصة الأولى ليلة الاثنين الأول من نوفمبر 1954 في معاقل الأوراس الشامخة والقبائل والشمال القسنطيني والغرب الجزائري، لتعلن بداية ثورة شعبية حاسمة قلبت موازين القوى الاستعمارية.
                     </p>
                 </article>
 
                 <article class="chronicle-card highlighted-card">
-                    <div class="card-lead-num accent-red">02</div>
+                    <div class="card-header-row">
+                        <span class="card-lead-num accent-red">02</span>
+                        <span class="card-date">الميثاق التأسيسي</span>
+                    </div>
                     <h3>ميثاق بيان أول نوفمبر</h3>
                     <p>
-                        وثيقة مرجعية تاريخية رسمت معالم الثورة التحريرية،
-                        محددة الهدف الأسمى في استرجاع السيادة الوطنية الكاملة،
-                        وبناء دولة جزائرية ديمقراطية اجتماعية مستقلة
-                        في إطار المبادئ الإسلامية.
+                        وثيقة مرجعية تاريخية رسمت معالم الثورة التحريرية، محددة الهدف الأسمى في استرجاع السيادة الوطنية الكاملة، وبناء دولة جزائرية ديمقراطية اجتماعية مستقلة في إطار المبادئ الإسلامية.
                     </p>
                 </article>
 
                 <article class="chronicle-card">
-                    <div class="card-lead-num">03</div>
+                    <div class="card-header-row">
+                        <span class="card-lead-num">03</span>
+                        <span class="card-date">1954 — 1962</span>
+                    </div>
                     <h3>قوافل الفداء والتضحية</h3>
                     <p>
-                        مليون ونصف المليون من الشهداء الأبرار رووا بدمائهم
-                        الزكية تراب هذا الوطن الطاهر، لتبقى تضحياتهم أعظم
-                        رمز للصمود والحرية تتوارثه الأجيال جيلاً بعد جيل.
+                        مليون ونصف المليون من الشهداء الأبرار رووا بدمائهم الزكية تراب هذا الوطن الطاهر، لتبقى تضحياتهم أعظم رمز للصمود والحرية تتوارثه الأجيال جيلاً بعد جيل.
                     </p>
                 </article>
             </div>
         </section>
 
-        <section class="institution-profile">
+        <section id="proclamation" class="proclamation-section reveal">
+            <div class="section-badge-wrap">
+                <span class="badge-title">الوثيقة التاريخية الخالدة</span>
+                <h2 class="section-main-title">مرتكزات بيان أول نوفمبر 1954</h2>
+            </div>
+
+            <div class="tabs-wrapper">
+                <div class="tabs-header" role="tablist">
+                    <button class="tab-btn active" data-tab="tab-goals" role="tab" aria-selected="true">الأهداف الداخلية والخارجية</button>
+                    <button class="tab-btn" data-tab="tab-means" role="tab" aria-selected="false">وسائل الكفاح والعمل</button>
+                    <button class="tab-btn" data-tab="tab-call" role="tab" aria-selected="false">نداء الشعب الجزائري</button>
+                </div>
+
+                <div class="tabs-body">
+                    <div class="tab-panel active" id="tab-goals" role="tabpanel">
+                        <h4>الاستقلال الوطني وإقامة الدولة الجزائرية</h4>
+                        <p>
+                            نصّ البيان بوضوح لا يقبل التأويل على إقامة الدولة الجزائرية الديمقراطية الاجتماعية ذات السيادة ضمن إطار المبادئ الإسلامية، واحترام جميع الحريات الأساسية دون تمييز عرقي أو ديني، مع تدويل القضية الجزائرية وتحقيق وحدة شمال إفريقيا في إطارها الطبيعي العربي والإسلامي.
+                        </p>
+                    </div>
+                    <div class="tab-panel" id="tab-means" role="tabpanel">
+                        <h4>الكفاح المسلح والعمل الدبلوماسي</h4>
+                        <p>
+                            توحيد جميع القوى الوطنية السليمة لتصفية النظام الاستعماري، ومواصلة الكفاح بكل الوسائل حتى تحقيق الهدف النهائي، عبر العمل المباشر في الداخل والعمل الدبلوماسي والإعلامي في الخارج لكسب تأييد الشعوب المحبة للحرية والسلام.
+                        </p>
+                    </div>
+                    <div class="tab-panel" id="tab-call" role="tabpanel">
+                        <h4>التفاف الشعب حول جبهة التحرير الوطني</h4>
+                        <p>
+                            وجّهت الأمانة الوطنية لجبهة التحرير الوطني نداءً تاريخياً لكل جزائري وجزائرية لتأدية الواجب الوطني والالتفاف حول الثورة؛ مؤكدة أن جبهة التحرير هي جبهة كل الوطنيين الأحرار لتحقيق الحرية والكرامة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="martyr" class="martyr-memorial reveal">
+            <div class="martyr-box">
+                <div class="martyr-seal">
+                    <span class="seal-star">★</span>
+                    <span class="seal-text">سجل الخلود</span>
+                </div>
+                <div class="martyr-info">
+                    <span class="martyr-subtitle">تخليداً لاسم المؤسسة</span>
+                    <h2 class="martyr-name">الشهيد البطل: حسيني حسين</h2>
+                    <p class="martyr-bio">
+                        تتشرف المؤسسة بحمل اسم <strong>الشهيد حسيني حسين</strong>، أحد رجالات الوطن الأوفياء الذين لبّوا نداء الحق والواجب خلال ثورة التحرير المظفرة، مقدماً روحه الزكية فداءً لحرية الجزائر واستقلالها. إن اقتران اسم هذا الصرح العلمي باسم الشهيد يرسخ في وجدان كل تلميذ وأستاذ أن مقاعد العلم التي ننعم بها اليوم كانت ثمرة دماء طاهرة وتضحيات جسام.
+                    </p>
+                    <div class="martyr-quote">
+                        « رحم الله الشهيد حسيني حسين وكافة شهداء الوطن الأبرار، وأسكنهم فسيح جنانه »
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="institution" class="institution-profile reveal">
             <div class="section-badge-wrap">
                 <span class="badge-title">صرح التربية والذاكرة</span>
-                <h2 class="section-main-title">التعريف بمؤسسة ثانوية حسيني حسين</h2>
+                <h2 class="section-main-title">الرسالة التربوية لثانوية حسيني حسين</h2>
             </div>
 
             <div class="profile-overview-box">
                 <p class="lead-text">
-                    تحمل <strong>ثانوية حسيني حسين</strong> بفخر واعتزاز
-                    اسم أحد شهداء الثورة التحريرية المباركة، لتكون امتداداً
-                    حياً لرسالة الشهداء في ميادين التربية، التعليم،
-                    وبناء الإنسان الجزائري الواعي والمتشبع بقيم نوفمبر.
+                    تُعد <strong>ثانوية حسيني حسين</strong> امتداداً حياً لرسالة الشهداء في ميادين التربية، التعليم، وبناء الإنسان الجزائري الواعي والمتشبع بقيم نوفمبر ومبادئ الهوية الوطنية.
                 </p>
                 <p class="body-text">
-                    تعمل المؤسسة على ترسيخ التفوق الدراسي جنباً إلى جنب
-                    مع غرس الروح الوطنية والانضباط لدى مئات التلاميذ،
-                    مؤكدة أن معركة التحرير التي خاضها الآباء بالسلاح
-                    تتكامل اليوم مع معركة الوعي والمعرفة التي يخوضها الأبناء
-                    على مقاعد الدراسة.
+                    تعمل المؤسسة على ترسيخ التفوق الدراسي جنباً إلى جنب مع غرس الروح الوطنية والانضباط لدى التلاميذ، مؤكدة أن معركة التحرير التي خاضها الآباء بالسلاح تتكامل اليوم مع معركة الوعي والمعرفة والتكنولوجيا التي يخوضها الأبناء لتحقيق نهضة الجزائر.
                 </p>
             </div>
 
             <div class="features-grid">
                 <article class="feature-item">
                     <div class="item-tag">النهج البيداغوجي</div>
-                    <h3>تأطير علمي متميز</h3>
+                    <h3>تأطير علمي وأكاديمي متميز</h3>
                     <p>
-                        توفير مسارات دراسية شاملة في الشعب العلمية والتقنية
-                        والأدبية، تحت إشراف طاقم تربوي وإداري كفء يسهر على
-                        مرافقة التلاميذ لتحقيق أعلى معدلات النجاح.
+                        توفير مسارات دراسية شاملة في الشعب العلمية والتقنية والأدبية، تحت إشراف طاقم تربوي وإداري يسهر على مرافقة التلاميذ لتحقيق التميز في شهادة البكالوريا.
                     </p>
                 </article>
 
                 <article class="feature-item highlighted-item">
                     <div class="item-tag accent-red">البنية والتجهيزات</div>
-                    <h3>بيئة تعليمية داعمة</h3>
+                    <h3>بيئة تعليمية محفزة</h3>
                     <p>
-                        مخابر علمية مجهزة لأشغال الفيزياء والعلوم، مكتبة غنية
-                        بالمراجع التاريخية والأكاديمية، وقاعات مهيأة للدعم
-                        المستمر ومرافقة تلاميذ الأقسام النهائية.
+                        مخابر علمية مجهزة للتجارب التطبيقية في الفيزياء والعلوم، مكتبة غنية بالمراجع التاريخية والأكاديمية، وقاعات مهيأة للمرافقة البيداغوجية المستمرة.
                     </p>
                 </article>
 
                 <article class="feature-item">
                     <div class="item-tag">العهد والوفاء</div>
-                    <h3>حفظ الذاكرة الوطنية</h3>
+                    <h3>إحياء الذاكرة الوطنية</h3>
                     <p>
-                        تنظيم سنوي متواصل للمعارض والندوات التاريخية، وتفعيل
-                        النوادي الفكرية التي تنمي في نفوس الناشئة الاعتزاز
-                        بتاريخ الجزائر وثورتها المظفرة.
+                        تنظيم دوري للمعارض والندوات التاريخية في المناسبات الوطنية، وتفعيل النوادي الثقافية والعلمية التي تنمي في نفوس الناشئة الاعتزاز بتاريخ الجزائر المجيد.
                     </p>
                 </article>
             </div>
         </section>
 
-        <section class="pledge-section">
+        <section class="pledge-section reveal">
             <div class="pledge-header">
                 <h3>عهد المؤسسة: من رصاصة التحرير إلى سلاح القلم والمعرفة</h3>
             </div>
             <div class="pledge-content">
                 <p>
-                    إن أسرة <strong>ثانوية حسيني حسين</strong> — إدارة،
-                    أساتذة، وتلاميذ — تجدد في هذا اليوم الأغر العهد والولاء
-                    لرسالة أول نوفمبر الخالدة؛ فالحرية التي انتُزعت بقوافل
-                    الشهداء تصان بالجد والاجتهاد والأمانة العلمية لخدمة
-                    الجزائر وعزتها وسؤددها.
+                    إن أسرة <strong>ثانوية حسيني حسين</strong> — إدارة، أساتذة، وتلاميذ — تجدد في ذكرى أول نوفمبر الخالدة العهد والولاء لرسالة الشهداء؛ فالحرية التي انتُزعت بالتضحيات الجسام تُصان اليوم بالجد والاجتهاد والأمانة العلمية لخدمة الجزائر وعزتها وسؤددها.
                 </p>
             </div>
             <div class="pledge-footer">
@@ -170,10 +259,10 @@
         <div class="footer-inner">
             <div class="footer-meta">
                 <p class="school-footer-tag">
-                    الموقع التذكاري لـ: <strong>ثانوية حسيني حسين</strong>
+                    البوابة التذكارية لـ: <strong>ثانوية حسيني حسين</strong>
                 </p>
                 <p class="footer-note">
-                    صفحة تاريخية وتربوية مخصصة للتعريف بالمؤسسة وتخليد ملحمة أول نوفمبر 1954.
+                    وثيقة رقمية تاريخية وتربوية مخصصة للتعريف بالمؤسسة وتخليد ملحمة أول نوفمبر 1954.
                 </p>
             </div>
 
@@ -186,7 +275,7 @@
                    target="_blank" 
                    rel="noopener noreferrer">
                     <span class="pill-dot"></span>
-                    <span>تواصل عبر واتساب: <bdi>0562020496</bdi></span>
+                    <span>تواصل: <bdi>0562 02 04 96</bdi></span>
                 </a>
             </div>
         </div>
